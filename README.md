@@ -1,43 +1,164 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/iL9H21uI)
-# Document Retriever from Web-Scraped Dataset
+﻿📄 Document Retrieval System with TF-IDF and Streamlit
+🧩 Overview
+This project implements a Document Retrieval System using a web-scraped dataset. Users can query and retrieve relevant documents based on their search terms. The system leverages TF-IDF (Term Frequency-Inverse Document Frequency) for document indexing and retrieval, offering a sleek and interactive interface built with Streamlit.
 
-## Project Overview
 
-This week's project focuses on building a document retrieval system using a web-scraped dataset. The system should allow users to query and retrieve relevant documents from a chosen dataset.
+________________
 
-### Objectives
 
-- Understand the basics of document retrieval systems.
-- Gain hands-on experience with web scraping and dataset preparation.
-- Implement a system to process, index, and query documents.
-- Learn to evaluate the effectiveness of retrieval algorithms.
+✨ Features
+* 🌐 Web Scraping: Extract data from websites using tools like BeautifulSoup or Scrapy while adhering to ethical practices.
+* 🧹 Text Preprocessing: Clean and prepare the text by removing noise, tokenizing, and normalizing for indexing.
+* 📚 Efficient Document Indexing: Utilize TF-IDF to rank documents based on query relevance.
+* 🔍 Interactive Search: Input search queries and get instant, ranked results with highlighted terms.
+* 🚀 Real-Time Querying: Experience fast and responsive search functionality.
 
-### Scope
 
-- Students will select a website and scrape data to create a dataset for the project.
-- The topic or concept of the document retrieval system is left open for creativity.
-- The system should include:
-  - A scraping mechanism (to obtain the dataset).
-  - Data cleaning and preprocessing steps.
-  - Document indexing for efficient search.
-  - A query interface to retrieve documents based on relevance (Streamlit).
+________________
 
-### Requirements
 
-1. **Web Scraping or Dataset Preparation**
+📁 File Structure
+├── data/
 
-   - Use tools like BeautifulSoup, Scrapy, or an API if available.
-   - Ensure ethical scraping practices (e.g., respect robots.txt).
 
-2. **Document Processing**
+│   ├── series_data.csv       # Dataset file for the project
 
-   - Clean and preprocess the text (e.g., remove noise, tokenize).
 
-3. **Search and Retrieval System**
+├── data_cleaning.ipynb       # Notebook for cleaning raw data
 
-   - Implement an indexing mechanism (e.g., inverted index).
-   - Develop a query interface using algorithms like (e.g., TF-IDF).
 
-4. **Documentation**
+├── preprocess_data.ipynb     # Notebook for preprocessing text
 
-   - Provide a clear README with setup and usage instructions.
+
+├── extract_serieses.py       # Python script to extract data
+
+
+├── app.py                    # Streamlit application
+
+
+├── requirements.txt          # Required Python packages
+
+
+└── README.md                 # Project documentation (this file)
+
+
+________________
+
+
+🎯 Project Scope
+1. Data Collection
+
+
+   * Extract text data using web scraping tools or APIs.
+   * Follow ethical practices (e.g., respect robots.txt).
+
+
+2. Data Cleaning & Preprocessing
+
+
+   * Remove noise such as HTML tags and special characters.
+   * Tokenize, normalize, and remove stopwords.
+
+
+3. TF-IDF Indexing
+
+
+   * Create an inverted index for efficient retrieval.
+   * Compute TF-IDF scores for ranking documents.
+
+
+4. Search & Query Interface
+
+
+   * Develop an algorithm for ranking documents based on query relevance.
+   * Build an interactive query interface with Streamlit.
+
+
+5. Evaluation
+
+
+   * Measure system performance using precision, recall, and F1-score.
+
+
+________________
+
+
+🏗️ System Architecture
+1. Data Scraping
+Tools: BeautifulSoup, Scrapy, or APIs
+Output: Raw dataset in CSV/JSON format
+
+
+   2. Preprocessing Pipeline
+
+
+   * Remove noise and stopwords
+   * Tokenize and normalize text
+
+
+   3. TF-IDF Indexing
+
+
+   * Efficient document-term storage
+   * Calculate similarity scores for queries
+
+
+   4. Streamlit App
+
+
+   * User-friendly search interface
+   * Display ranked results with document previews
+
+
+________________
+
+
+⚙️ Setup and Usage
+🛠️ Prerequisites
+   * Python 3.8+
+   * Virtual environment (recommended)
+   * Libraries: beautifulsoup4, nltk, scikit-learn, streamlit, pandas
+📥 Installation
+   1. Clone the repository:
+
+
+git clone <repository_url>
+
+
+cd <repository_folder>
+
+
+   2. Install dependencies:
+
+
+pip install -r requirements.txt
+
+
+   3. Run the application:
+
+
+streamlit run app.py
+🧑‍💻 Usage
+   1. Launch the Streamlit app.
+   2. Enter a query in the search box.
+   3. View the results ranked by relevance.
+
+
+________________
+
+
+📊 Example Queries
+   * Query: "machine learning applications"
+Results: Top documents discussing machine learning applications, ranked by relevance.
+
+
+________________
+
+
+🚀 Future Enhancements
+      * 🔬 Semantic Search: Integrate advanced NLP models like BERT.
+      * 🌍 Multi-language Support: Extend functionality for multilingual datasets.
+      * 📊 Analytics: Add visualizations for query statistics and document insights.
+
+
+________________
